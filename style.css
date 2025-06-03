@@ -1,0 +1,170 @@
+:root {
+    --cor-fundo: #fdf7f2;
+    --cor-destaque: #f28c3a;
+    --cor-secundaria: #4a3b38;
+    --cor-texto: #5a4e4c;
+    --cor-menu: #fffaf7;
+    --cor-frufru: #f5e1c8;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+/* Logo com sombra e borda arredondada */
+.logo {
+    display: block;
+    margin: 30px auto 10px;
+    width: 160px;
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(242, 140, 58, 0.4);
+    transition: transform 0.3s ease;
+}
+.logo:hover {
+    transform: rotate(-3deg) scale(1.05);
+}
+
+/* Header com gradiente e sombra */
+header {
+    background: linear-gradient(90deg, var(--cor-destaque), var(--cor-frufru));
+    text-align: center;
+    border-bottom: 3px solid var(--cor-secundaria);
+    box-shadow: 0 3px 10px rgba(74, 59, 56, 0.3);
+    padding-bottom: 10px;
+}
+
+nav ul.menu {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 40px 0;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+
+/* Botões das abas com estilo frufru */
+nav ul.menu li button.tab-button {
+    background-color: var(--cor-menu);
+    border: 2px solid var(--cor-destaque);
+    border-radius: 30px;
+    padding: 10px 25px;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--cor-secundaria);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(242, 140, 58, 0.3);
+}
+
+nav ul.menu li button.tab-button:hover {
+    background-color: var(--cor-destaque);
+    color: white;
+    box-shadow: 0 6px 12px rgba(242, 140, 58, 0.6);
+}
+
+nav ul.menu li button.tab-button.active {
+    background-color: var(--cor-destaque);
+    color: white;
+    box-shadow: 0 6px 14px rgba(242, 140, 58, 0.8);
+}
+
+/* Conteúdo das abas */
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 30px;
+    background-color: var(--cor-frufru);
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(74, 59, 56, 0.25);
+    min-height: 380px;
+}
+
+section.tab-content {
+    display: none;
+    animation: fadeIn 0.7s ease forwards;
+}
+
+section.tab-content.active {
+    display: block;
+}
+
+h2 {
+    color: var(--cor-destaque);
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 25px;
+    font-family: 'Segoe UI Semibold', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 1.3px;
+    text-shadow: 1px 1px 4px rgba(242, 140, 58, 0.8);
+}
+
+/* Galeria com bordas arredondadas e sombra */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+}
+
+.galeria img {
+    width: 240px;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(74, 59, 56, 0.15);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    cursor: pointer;
+}
+
+.galeria img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 14px 30px rgba(242, 140, 58, 0.5);
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--cor-secundaria);
+    text-shadow: 0.5px 0.5px 1px rgba(255, 255, 255, 0.7);
+}
+
+/* Links */
+a {
+    color: var(--cor-destaque);
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+a:hover {
+    color: var(--cor-secundaria);
+    text-decoration: underline;
+}
+
+/* Footer com gradiente */
+footer {
+    background: linear-gradient(90deg, var(--cor-frufru), var(--cor-destaque));
+    text-align: center;
+    padding: 25px 10px;
+    font-size: 15px;
+    color: var(--cor-secundaria);
+    border-top: 3px solid var(--cor-secundaria);
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    box-shadow: 0 -3px 12px rgba(74, 59, 56, 0.2);
+}
+
+/* Animação fadeIn */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
